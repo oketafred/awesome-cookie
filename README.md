@@ -1,6 +1,6 @@
 # Awesome Cookie
 
-This is a simple Javascript API for makes working and manipulating cookies a breeze.
+This is a simple Javascript API that makes working and manipulating cookies a breeze.
 
 ## Installation
 ```
@@ -17,4 +17,9 @@ getCookie('name');
 
 removeCookie('name');
 ```
+## Author
+- [Oketa Fred](https://github.com/oketafred)
 
+## License
+
+[MIT](LICENSE)
