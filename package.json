@@ -2,14 +2,23 @@
   "name": "awesome-cookie",
   "version": "0.0.2",
   "description": "Makes working with cookies much easier and faster",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
     "awesome-cookie",
     "cookie",
     "cookies"
   ],
-  "main": "index.js",
   "scripts": {
-    "prettier": "prettier --write \"**/*.js\""
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/*.ts\" \"src/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -22,11 +31,13 @@
   },
   "homepage": "https://github.com/oketafred/awesome-cookie#readme",
   "devDependencies": {
+    "@types/jest": "^29.4.0",
     "eslint": "^8.34.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.4"
+    "jest": "^29.4.3",
+    "prettier": "^2.8.4",
+    "ts-jest": "^29.0.5",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.9.5"
   }
 }

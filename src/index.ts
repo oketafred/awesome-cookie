@@ -1,7 +1,7 @@
-export function getCookie(name) {
+function getCookie(name: string): string | null {
   const cookieName = `${encodeURIComponent(name)}=`;
   const cookie = document.cookie;
-  let value = null;
+  let value: string | null = null;
 
   const startIndex = cookie.indexOf(cookieName);
   if (startIndex > -1) {
@@ -20,10 +20,17 @@ export function getCookie(name) {
   return value;
 }
 
-export function setCookie(name, value, expires, path, domain, secure) {
+function setCookie(
+  name: string,
+  value: string,
+  expires?: Date,
+  path?: string,
+  domain?: string,
+  secure?: boolean
+): void {
   let cookieText = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
   if (expires instanceof Date) {
-    cookieText += `; expires=${expires.toGMTString()}`;
+    cookieText += `; expires=${expires.toISOString()}`;
   }
 
   if (path) cookieText += `; path=${path}`;
@@ -33,6 +40,11 @@ export function setCookie(name, value, expires, path, domain, secure) {
   document.cookie = cookieText;
 }
 
-export function removeCookie(name, path, domain, secure) {
+function removeCookie(
+  name: string,
+  path?: string,
+  domain?: string,
+  secure?: boolean
+): void {
   setCookie(name, '', new Date(0), path, domain, secure);
 }
