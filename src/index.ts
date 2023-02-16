@@ -9,9 +9,7 @@ function getCookie(name: string): string | null {
     if (endIndex === -1) {
       endIndex = cookie.length;
     }
-    value = decodeURIComponent(
-      cookie.substring(startIndex + name.length, endIndex)
-    );
+    value = decodeURIComponent(cookie.substring(startIndex + name.length, endIndex));
   }
 
   if (value) {
@@ -40,11 +38,6 @@ function setCookie(
   document.cookie = cookieText;
 }
 
-function removeCookie(
-  name: string,
-  path?: string,
-  domain?: string,
-  secure?: boolean
-): void {
+function removeCookie(name: string, path?: string, domain?: string, secure?: boolean): void {
   setCookie(name, '', new Date(0), path, domain, secure);
 }
