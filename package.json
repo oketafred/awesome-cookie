@@ -1,6 +1,6 @@
 {
   "name": "awesome-cookie",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Makes working with cookies much easier and faster",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
