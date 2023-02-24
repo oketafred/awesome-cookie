@@ -41,5 +41,3 @@ export function setCookie(
 export function removeCookie(name: string, path?: string, domain?: string, secure?: boolean): void {
   setCookie(name, '', new Date(0), path, domain, secure);
 }
-
-export {document}
