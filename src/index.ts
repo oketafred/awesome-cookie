@@ -1,4 +1,4 @@
-function getCookie(name: string): string | null {
+export function getCookie(name: string): string | null {
   const cookieName = `${encodeURIComponent(name)}=`;
   const cookie = document.cookie;
   let value: string | null = null;
@@ -18,7 +18,7 @@ function getCookie(name: string): string | null {
   return value;
 }
 
-function setCookie(
+export function setCookie(
   name: string,
   value: string,
   expires?: Date,
@@ -38,6 +38,6 @@ function setCookie(
   document.cookie = cookieText;
 }
 
-function removeCookie(name: string, path?: string, domain?: string, secure?: boolean): void {
+export function removeCookie(name: string, path?: string, domain?: string, secure?: boolean): void {
   setCookie(name, '', new Date(0), path, domain, secure);
 }
