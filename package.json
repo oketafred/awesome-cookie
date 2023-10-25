@@ -31,10 +31,10 @@
   "homepage": "https://github.com/oketafred/awesome-cookie#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
-    "jsdom": "^21.1.0",
-    "tsup": "^6.6.3",
-    "typescript": "^4.9.5",
+    "jsdom": "^22.1.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
     "vite": "^4.1.4",
-    "vitest": "^0.29.1"
+    "vitest": "^0.34.6"
   }
 }
