@@ -1,5 +1,11 @@
 # awesome-cookie
 
+## 0.0.9
+
+### Patch Changes
+
+- 9699af2: Update dependencies
+
 ## 0.0.8
 
 ### Patch Changes
