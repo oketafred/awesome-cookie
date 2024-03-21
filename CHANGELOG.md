@@ -1,5 +1,11 @@
 # awesome-cookie
 
+## 0.1.1
+
+### Patch Changes
+
+- 83cf164: Upgrade dependencies to the latest versions.
+
 ## 0.1.0
 
 ### Patch Changes
