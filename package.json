@@ -1,6 +1,6 @@
 {
   "name": "awesome-cookie",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Makes working with cookies much easier and faster",
   "private": false,
   "main": "./dist/index.js",
