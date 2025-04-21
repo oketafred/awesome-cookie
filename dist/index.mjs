@@ -21,12 +21,9 @@ function setCookie(name, value, expires, path, domain, secure) {
   if (expires instanceof Date) {
     cookieText += `; expires=${expires.toISOString()}`;
   }
-  if (path)
-    cookieText += `; path=${path}`;
-  if (domain)
-    cookieText += `; domain=${domain}`;
-  if (secure)
-    cookieText += `; secure`;
+  if (path) cookieText += `; path=${path}`;
+  if (domain) cookieText += `; domain=${domain}`;
+  if (secure) cookieText += `; secure`;
   document.cookie = cookieText;
 }
 function removeCookie(name, path, domain, secure) {

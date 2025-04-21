@@ -18,13 +18,13 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.ts
-var src_exports = {};
-__export(src_exports, {
+var index_exports = {};
+__export(index_exports, {
   getCookie: () => getCookie,
   removeCookie: () => removeCookie,
   setCookie: () => setCookie
 });
-module.exports = __toCommonJS(src_exports);
+module.exports = __toCommonJS(index_exports);
 function getCookie(name) {
   const cookieName = `${encodeURIComponent(name)}=`;
   const cookie = document.cookie;
@@ -47,12 +47,9 @@ function setCookie(name, value, expires, path, domain, secure) {
   if (expires instanceof Date) {
     cookieText += `; expires=${expires.toISOString()}`;
   }
-  if (path)
-    cookieText += `; path=${path}`;
-  if (domain)
-    cookieText += `; domain=${domain}`;
-  if (secure)
-    cookieText += `; secure`;
+  if (path) cookieText += `; path=${path}`;
+  if (domain) cookieText += `; domain=${domain}`;
+  if (secure) cookieText += `; secure`;
   document.cookie = cookieText;
 }
 function removeCookie(name, path, domain, secure) {
