@@ -1,5 +1,16 @@
 # awesome-cookie
 
+## 0.2.0
+
+### Minor Changes
+
+- c2d2534: update dependencies and node version
+- c2d2534: update dependencies and node version
+
+### Patch Changes
+
+- 5b434ef: Update dependencies to the latest versions
+
 ## 0.1.1
 
 ### Patch Changes
